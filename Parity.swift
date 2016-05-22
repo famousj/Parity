@@ -8,54 +8,42 @@
 
 import Foundation
 
-/// The parity of an integer: even or odd.
-enum Parity {
-  
-    /// Even parity.
+public enum Parity {
     case Even
-    
-    /// Odd parity.
     case Odd
 }
 
-protocol IntegerParity {
-  
-    /// The number's parity: even or odd.
+public protocol IntegerParity {
+    
     var parity: Parity { get }
     
 }
 
-// MARK: - Helpers
-
-extension IntegerParity {
-  
-    /// The number is even.
+public extension IntegerParity {
+    
     var isEven: Bool {
         return parity == .Even
     }
     
-    /// The number is odd.
     var isOdd: Bool {
         return parity == .Odd
     }
     
 }
 
-// MARK: - Implementations
+// MARK: - Parity
 
 extension Int: IntegerParity {
-  
-    /// The number's parity.
-    var parity: Parity {
+    
+    public var parity: Parity {
         return self % 2 == 0 ? .Even : .Odd
     }
     
 }
 
 extension UInt: IntegerParity {
-  
-    /// The number's parity.
-    var parity: Parity {
+    
+    public var parity: Parity {
         return self % 2 == 0 ? .Even : .Odd
     }
     
