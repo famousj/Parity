@@ -1,0 +1,2 @@
+# Parity
+Integer parity microlibrary
