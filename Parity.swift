@@ -10,16 +10,16 @@ import Foundation
 
 /// The parity of an integer: even or odd.
 public enum Parity {
-  
+    
     /// Even parity.
-    case even
+    case Even
     
     /// Odd parity.
-    case odd
+    case Odd
 }
 
 public protocol IntegerParity {
-  
+    
     /// The number's parity: even or odd.
     var parity: Parity { get }
     
@@ -28,35 +28,66 @@ public protocol IntegerParity {
 // MARK: - Helpers
 
 public extension IntegerParity {
-  
+    
     /// The number is even.
     var isEven: Bool {
-        return parity == .even
+        return parity == .Even
     }
     
     /// The number is odd.
     var isOdd: Bool {
-        return parity == .odd
+        return parity == .Odd
     }
     
 }
 
 // MARK: - Implementations
 
-extension Int: IntegerParity {
-  
+extension IntegerType where Self: IntegerParity {
+    
     /// The number's parity.
     public var parity: Parity {
-        return self % 2 == 0 ? .even : .odd
+        return self % 2 == 0 ? .Even : .Odd
     }
     
 }
 
+extension Int: IntegerParity {
+    
+}
+
+extension Int8: IntegerParity {
+    
+}
+
+extension Int16: IntegerParity {
+    
+}
+
+extension Int32: IntegerParity {
+    
+}
+
+extension Int64: IntegerParity {
+    
+}
+
 extension UInt: IntegerParity {
-  
-    /// The number's parity.
-    public var parity: Parity {
-        return self % 2 == 0 ? .even : .odd
-    }
+    
+}
+
+extension UInt8: IntegerParity {
+    
+}
+
+extension UInt16: IntegerParity {
+    
+}
+
+extension UInt32: IntegerParity {
+    
+}
+
+extension UInt64: IntegerParity {
     
 }
