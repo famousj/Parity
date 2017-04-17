@@ -12,10 +12,10 @@ import Foundation
 public enum Parity {
     
     /// Even parity.
-    case Even
+    case even
     
     /// Odd parity.
-    case Odd
+    case odd
 }
 
 public protocol IntegerParity {
@@ -31,12 +31,12 @@ public extension IntegerParity {
     
     /// The number is even.
     var isEven: Bool {
-        return parity == .Even
+        return parity == .even
     }
     
     /// The number is odd.
     var isOdd: Bool {
-        return parity == .Odd
+        return parity == .odd
     }
     
 }
@@ -47,47 +47,27 @@ extension IntegerType where Self: IntegerParity {
     
     /// The number's parity.
     public var parity: Parity {
-        return self % 2 == 0 ? .Even : .Odd
+        return self % 2 == 0 ? .even : .odd
     }
     
 }
 
-extension Int: IntegerParity {
-    
-}
+extension Int: IntegerParity { }
 
-extension Int8: IntegerParity {
-    
-}
+extension Int8: IntegerParity { }
 
-extension Int16: IntegerParity {
-    
-}
+extension Int16: IntegerParity { }
 
-extension Int32: IntegerParity {
-    
-}
+extension Int32: IntegerParity { }
 
-extension Int64: IntegerParity {
-    
-}
+extension Int64: IntegerParity { }
 
-extension UInt: IntegerParity {
-    
-}
+extension UInt: IntegerParity { }
 
-extension UInt8: IntegerParity {
-    
-}
+extension UInt8: IntegerParity { }
 
-extension UInt16: IntegerParity {
-    
-}
+extension UInt16: IntegerParity { }
 
-extension UInt32: IntegerParity {
-    
-}
+extension UInt32: IntegerParity { }
 
-extension UInt64: IntegerParity {
-    
-}
+extension UInt64: IntegerParity { }

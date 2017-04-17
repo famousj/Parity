@@ -31,9 +31,9 @@ if (number % 2 == 0) {
 
 // After:
 switch number.parity {
-    case .Even:
+    case .even:
         print("even")
-    case .Odd:
+    case .odd:
         print("odd")
 }
 
