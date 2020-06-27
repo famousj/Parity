@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name                    = "Parity"
-  s.version                 = "2.2.0"
+  s.version                 = "2.3.0"
   s.summary                 = "An integer parity microlibrary."
   s.homepage                = "https://github.com/dclelland/Parity"
   s.license                 = { :type => 'MIT' }
