@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.swift_version           = '5.0'
   s.ios.deployment_target   = '8.0'
   s.osx.deployment_target   = '10.15'
-  s.source_files            = 'Parity.swift'
+  s.source_files            = 'Sources/Parity/Parity.swift'
   s.requires_arc            = true
 end
